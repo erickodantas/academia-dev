@@ -6,8 +6,8 @@ public class Course {
     private String instructorName;
     private int durationInHours;
     private DifficultyLevel difficultyLevel;
-    private CoursesStatus status;
-    public enum CoursesStatus {
+    private CourseStatus status;
+    public enum CourseStatus {
         ACTIVE,
         INACTIVE
     }
@@ -17,7 +17,7 @@ public class Course {
         ADVANCED
     }
     
-    public Course(String title, String description, String instructorName, int durationInHours, DifficultyLevel difficultyLevel, CoursesStatus status) {
+    public Course(String title, String description, String instructorName, int durationInHours, DifficultyLevel difficultyLevel, CourseStatus status) {
         this.title = title;
         this.description = description;
         this.instructorName = instructorName;
@@ -66,19 +66,19 @@ public class Course {
         this.difficultyLevel = difficultyLevel;
     }
 
-    public CoursesStatus getStatus() {
+    public CourseStatus getStatus() {
         return status;
     }
 
-    public void setStatus(CoursesStatus status) {
+    public void setStatus(CourseStatus status) {
         this.status = status;
     }
 
     public void activate() {
-        this.status = CoursesStatus.ACTIVE;
+        this.status = CourseStatus.ACTIVE;
     }
 
     public void inactivate() {
-        this.status = CoursesStatus.INACTIVE;
+        this.status = CourseStatus.INACTIVE;
     }
 }
